@@ -1,1 +1,234 @@
-<h1>Hello I'm Dessy</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Dessy</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #dbe7f1 0%, #5777de 100%); /* Fun gradient background */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #282a36;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #faf3f7;
+        }
+        /* Navigation styles */
+        .nav {
+            margin-top: 20px;
+        }
+
+        .nav a {
+            color: #50abfa;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #f1f4f4eb;
+        }
+
+
+        /* Container styles */
+        .bio-container {
+            background-color: #282a36cb;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 800px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+        }
+
+        /* Profile picture wrapper styles */
+        .profile-pic-wrapper {
+           
+            padding: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 10px;
+            
+        }
+
+        /* Profile picture styles */
+        .profile-pic {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Heading styles */
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #50abfa;
+        }
+
+        /* Bio text styles */
+        .bio-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #f8f8f2;
+            margin-bottom: 20px;
+        }
+
+        /* Skills section */
+        .skills {
+            margin-bottom: 20px;
+        }
+
+        .skills h3 {
+            font-size: 20px;
+            color: #50abfa;
+            margin-bottom: 10px;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            font-size: 16px;
+            color: #f8f8f2;
+            margin: 5px 0;
+        }
+
+        /* Social links */
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links h3 {
+            font-size: 20px;
+            color: #50abfa;
+            margin-bottom: 10px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            background-color: #6272a4;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #f6eff3;
+        }
+
+        /* Social media icons colors */
+        .linkedin { background-color: #0077b5; }
+        .github { background-color: #333; }
+
+        /* Weekly Update Link Styles */
+        .update-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #50abfa;
+            color: #282a36;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .update-link:hover {
+            background-color: #f1ebef;
+            color: #fff;
+        }
+
+        
+        
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #282a36;
+            box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer p {
+            margin: 5px 0;
+            color: #f8f8f2;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Welcome to My Page!</h1>
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#about-me">About Me</a>
+            <a href="#weekly-update">Weekly Update</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div id="about-me"  class="bio-container">
+        <div class="profile-pic-wrapper">
+            <img src="Dessy.jpg" alt="Dessy" class="profile-pic">
+        </div>
+        <h2>Hello, I'm Dessy!</h2>
+        <p class="bio-text">🎓 Singapore Management University<br>💻 A Year 2 Student Undergraduate in Information Systems</p>
+        
+        <!-- Skills Section -->
+        <div class="skills">
+            <h3>Skills & Interests</h3>
+            <ul>
+                <li>💻 Web Development</li>
+                <li>🎵 Listening to Music</li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <h3>Connect with Me</h3>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin">LinkedIn</a>
+            <a href="https://www.github.com" target="_blank" class="social-icon github">GitHub</a>
+            
+        </div>
+    </div>
+     <!-- Weekly Update Section -->
+     <div id="weekly-update" class="bio-container">
+        <h2>Weekly Update</h2>
+        <p class="bio-text">Stay tuned for my latest learning experiences from each week.</p>
+        <a href="https://dessyyang.github.io/week1/justin.html" class="update-link">Week 1</a>
+    </div>
+    
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Dessy. All rights reserved.</p>
+
+    </footer>
+</body>
+</html>

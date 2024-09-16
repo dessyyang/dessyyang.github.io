@@ -133,6 +133,31 @@
             margin-bottom: 10px;
         }
 
+        .hobby-card {
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05);
+        }
+
+        .hobby-card img {
+            border-radius: 10px;
+        }
+
+        .hobby-card-title {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #50abfa;
+        }
+
+        .hobby-card-text {
+            color: #282a36;
+        }
+
         /* Footer styles */
         .footer {
             text-align: center;
@@ -211,6 +236,64 @@
             </div>
         </div>
 
+        <div class="container mt-5">
+            <div class="header-section">
+                <h1 style="text-align: center;">My Hobbies</h1>
+            </div>
+            <div class="row">
+                <!-- Cooking Hobby -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card hobby-card">
+                        <img src="cooking.jpg" class="card-img-top" alt="Cooking">
+                        <div class="card-body">
+                            <h5 class="card-title hobby-card-title">Cooking</h5>
+                            <p class="card-text hobby-card-text">I love experimenting with new recipes and cuisines in my free time.</p>
+                            <button class="btn btn-primary view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="cooking.jpg">View</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Music Hobby -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card hobby-card">
+                        <img src="music.jpg" class="card-img-top" alt="Listening to Music">
+                        <div class="card-body">
+                            <h5 class="card-title hobby-card-title">Listening to Music</h5>
+                            <p class="card-text hobby-card-text">Music is my daily companion, whether I'm working or relaxing.</p>
+                            <button class="btn btn-primary view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="music.jpg">View</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Traveling Hobby -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card hobby-card">
+                        <img src="travel.jpg" class="card-img-top" alt="Traveling">
+                        <div class="card-body">
+                            <h5 class="card-title hobby-card-title">Traveling</h5>
+                            <p class="card-text hobby-card-text">Exploring new cultures, places, and meeting people energizes my soul.</p>
+                            <button class="btn btn-primary view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="travel.jpg">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal for Zoomed Image -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Hobby Image</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" class="img-fluid" alt="Zoomed Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Weekly Update Section -->
         <div id="weekly-update" class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-sm-12">
@@ -230,6 +313,24 @@
         <p>&copy; 2024 Dessy. All rights reserved.</p>
     </footer>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get all view buttons
+        const viewButtons = document.querySelectorAll('.view-btn');
+
+        // Add click event listener to each button
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Get image source from data attribute
+                const imgSrc = this.getAttribute('data-img-src');
+                // Update the modal image src
+                document.getElementById('modalImage').src = imgSrc;
+                });
+            });
+        });
+
+    </script>
     <!-- Boostrap JavaScript CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
